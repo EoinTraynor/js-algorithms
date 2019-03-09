@@ -1,3 +1,3 @@
-# AlgoCasts
+# JavaScript Algorithms and Data Structures
 
-Companion repo to a course on Udemy.com
+Collection of common algorithmic problems
