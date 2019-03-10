@@ -8,6 +8,15 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+// iterative solution 
+function fib(n) {
+  const fib = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    const previousNumber = fib[i-1];
+    const secondPreviousNumber = fib[i-2];
+    fib.push(previousNumber + secondPreviousNumber);
+  }
+  return fib[n];
+}
 
 module.exports = fib;
