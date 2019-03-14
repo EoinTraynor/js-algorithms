@@ -9,3 +9,12 @@ Ways of organising information with optimal __runtime complexity__ for adding or
 Javascript natively implements several data structures.
 * Queue
 * Stack
+
+### Linked List
+An ordered collection of data, the collection contains a number of nodes.
+Each node contains 
+1. Data e.g. String, object etc.
+2. A reference to the next node (A chain). 
+
+* Head Node: The first node in a linked list,
+* Tail Node: The last node in a linked list, identified as it doesn't have a reference to a subsequent node 
