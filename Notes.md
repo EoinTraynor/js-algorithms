@@ -6,5 +6,6 @@ __If the function is called again with the same arguments, return the pre-comput
 
 ## Data Structures
 Ways of organising information with optimal __runtime complexity__ for adding or removing records
-
 Javascript natively implements several data structures.
+* Queue
+* Stack
