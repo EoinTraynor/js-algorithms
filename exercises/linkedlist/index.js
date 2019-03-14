@@ -40,6 +40,25 @@ class LinkedList {
   clear() {
     this.head = null;
   }
+  removeFirst() {
+    if(this.head === null) return;
+    const firstNode = this.head;
+    this.head = firstNode.next;
+  }
+  removeLast() {
+    if(this.head === null) return;    
+    if(this.head.next === null) {
+      this.head = null;
+      return;
+    }
+    let node = this.head;
+    let previous = null;
+    while (node.next) {
+      previous = node;
+      node = node.next;
+    }
+    previous.next = null;
+  }
 }
 
 module.exports = { Node, LinkedList };
