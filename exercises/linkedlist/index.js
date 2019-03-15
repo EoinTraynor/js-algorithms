@@ -74,6 +74,30 @@ class LinkedList {
     }
     return null;
   }
+  removeAt(n) {    
+    // handle no nodes
+    if (this.head === null) return null;
+    // removal of first node
+    if (n === 0) {
+      // no subsequent node 
+      if (this.head.next === null) this.head = null;
+      // subsequent node 
+      else this.head = this.head.next;
+      return;
+    }
+    let previousNode = null;
+    let currentNode = this.head;
+    let count = 0;
+    while (currentNode) {
+      if (count === n) {
+        previousNode.next = currentNode.next;
+        return;
+      }
+      previousNode = currentNode;
+      currentNode = currentNode.next;
+      count++;
+    }
+  }
 }
 
 module.exports = { Node, LinkedList };
