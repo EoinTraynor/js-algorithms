@@ -12,6 +12,15 @@
 //   c.next = b;
 //   circular(l) // true
 
-function circular(list) {}
+function circular(list) {  
+  let iterator = list.head;
+  let doubleIterator = list.head;
+  while (doubleIterator.next && doubleIterator.next) {
+    doubleIterator = doubleIterator.next.next;
+    iterator = iterator.next;
+    if (iterator === doubleIterator) return true;
+  }
+  return false;
+}
 
 module.exports = circular;
