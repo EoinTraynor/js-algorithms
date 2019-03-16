@@ -11,12 +11,12 @@ Javascript natively implements several data structures.
 
 ### Queue
 First In First Out
-![Queue](https://github.com/EoinTraynor/js-algorithms/notes_images/queue.png)
+![Queue](./notes_images/queue.png)
 
 
 ### Stack
 First In Last Out
-![Stack](https://github.com/EoinTraynor/js-algorithms/notes_images/stack.png)
+![Stack](./notes_images/stack.png)
 
 ### Linked List
 An ordered collection of data, the collection contains a number of nodes.
@@ -44,4 +44,4 @@ Image
 Iterate down through the first-most child node continuously until the base, iterate each of these nodes, then move back up the tree to the imediate parent and continue the same process on the next sibling aka. second-most node
 Image 
 
-![Depth First and Breadth First Traversal](https://github.com/EoinTraynor/js-algorithms/notes_images/DFandBF.gif)
+![Depth First and Breadth First Traversal](./notes_images/DFandBF.gif)
