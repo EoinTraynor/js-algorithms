@@ -27,7 +27,7 @@ class LinkedList {
     return count;
   }
   getFirst() {
-    return this.head;
+    return this.getAt(0);
   }
   getLast() {
     if (this.head === null) return null;
@@ -96,6 +96,40 @@ class LinkedList {
       previousNode = currentNode;
       currentNode = currentNode.next;
       count++;
+    }
+  }
+  insertAt(data, index) {
+    const newNode = new Node(data);
+    if (this.head === null) {
+      this.head = newNode;
+      return;
+    }
+    if (index === 0) {      
+      this.insertFirst(data);
+      return;
+    }
+    if (index > this.size()) {
+      this.insertLast(data);
+      return;
+    }
+    const currentIndexNode = this.getAt(index);
+    const previousIndexNode = this.getAt(index -1);
+    previousIndexNode.next = newNode;
+    newNode.next = currentIndexNode;
+  }
+  forEach(func) {
+    if (this.head === null) return null;
+    let currentNode = this.head;
+    while (currentNode) {
+      func(currentNode);
+      currentNode = currentNode.next;
+    } 
+  }
+  *[Symbol.iterator]() {
+    let node = this.head;
+    while (node) {
+      yield node;
+      node = node.next;
     }
   }
 }

@@ -7,8 +7,8 @@ __If the function is called again with the same arguments, return the pre-comput
 ## Data Structures
 Ways of organising information with optimal __runtime complexity__ for adding or removing records
 Javascript natively implements several data structures.
-* Queue
-* Stack
+* Queue - First In First Out 
+* Stack - First In Last Out
 
 ### Linked List
 An ordered collection of data, the collection contains a number of nodes.
@@ -18,3 +18,5 @@ Each node contains
 
 * Head Node: The first node in a linked list,
 * Tail Node: The last node in a linked list, identified as it doesn't have a reference to a subsequent node 
+
+__Tip:__ When creating methods for a linked list, for read, insert & delete, favour a generic index e.g. `getIndex(i)` > `getFirst() & getLast()`
