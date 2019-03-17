@@ -33,14 +33,13 @@ __Tip:__ When creating methods for a linked list, for read, insert & delete, fav
 A tree node contains:
 1. Data
 2. List of Child Nodes
-* Sibling nodes must share the same parent, *not* the same breadth aka. level
+Sibling nodes must share the same parent, *not* the same breadth aka. level
 
-#### Iterating through a tree
-##### Breadth-First Traversal
+#### Breadth-First Traversal
 Iterate through each level of the tree from first to last
 Image 
 
-##### Depth-First Traversal
+#### Depth-First Traversal
 Iterate down through the first-most child node continuously until the base, iterate each of these nodes, then move back up the tree to the imediate parent and continue the same process on the next sibling aka. second-most node
 Image 
 
