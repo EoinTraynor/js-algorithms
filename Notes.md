@@ -44,3 +44,10 @@ Iterate down through the first-most child node continuously until the base, iter
 Image 
 
 ![Depth First and Breadth First Traversal](./notes_images/DFandBF.gif)
+
+#### Binary Search Tree
+Nodes can contain a max 2 child nodes aka left and right.
+Restrict the values of the node, must be number(???)
+Binary Search Tree !== Binary tree (which the following two rules don't apply)
+The value of the left node must be less than the value of the parent node 
+The value on the right node must be greater than the value of the parent node
