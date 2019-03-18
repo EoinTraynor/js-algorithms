@@ -3,10 +3,19 @@
 Store the arguments and result of each function call.
 
 If the function is called again with the same arguments, return the pre-computed result. 
+
+## Searching
+### Binary Search
+Finding an item in a sorted list
+Is the value greater or less than the midpoint of the array. Disregard the other half.
+```js
+const mid = Math.floor(arr.length/2);
+arr.splice(0,mid) || arr.splice(mid);
+``` 
+
 ## Sorting
 ### Bubble Sort
 Worst possible time complexity:  n^2
-
 
 ### Selection Sort
 Worst possible time complexity:  n^2
