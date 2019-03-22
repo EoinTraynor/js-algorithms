@@ -95,6 +95,8 @@ _\*Javascript natively implements several data structures_
 
 **First In First Out**
 
+![Queue](./notes_images/queue.png)
+
 ```js
 // Example of a queue
 class Queue {
@@ -110,11 +112,12 @@ class Queue {
 }
 ```
 
-![Queue](./notes_images/queue.png)
 
 ## Stack
 
 **First In Last Out**
+
+![Stack](./notes_images/stack.png)
 
 ```js
 // Example of a stack
@@ -134,7 +137,6 @@ class Stack {
 }
 ```
 
-![Stack](./notes_images/stack.png)
 
 ## Linked List
 
