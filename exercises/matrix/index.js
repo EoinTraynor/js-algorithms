@@ -16,7 +16,6 @@
 //     [10,  9,  8, 7]]
 
 function matrix(n) {
-  // const matrix = Array(n).fill([]);
   const matrix = [];
   for (let i = 0; i < n; i++) {
     matrix.push([]);
@@ -29,16 +28,7 @@ function matrix(n) {
   let endCol = n-1;
   let endRow = n-1;
 
-  // for (let i = 1; i <= max; i++) {
-  //   matrix[startRow][startCol] = i;    
-  //   if (startCol === endCol) {
-  //     startRow++;
-  //   } else {
-  //     startCol++;
-  //   }
-  // }
-
-  while (startRow <= endRow && startCol <= endCol) {
+  while (counter <= max) {
     // top row
     for (let i = startCol; i <= endCol; i++) {
       matrix[startRow][i] = counter;
@@ -47,7 +37,7 @@ function matrix(n) {
     startRow++;
     // right column
     for (let i = startRow; i <= endRow; i++) {
-      matrix[i][endCol] = counter;      
+      matrix[i][endCol] = counter;
       counter++;
     }
     endCol--;
@@ -57,8 +47,8 @@ function matrix(n) {
       counter++;
     }
     endRow--;
-    // left column
-    for (let i = endRow; i <= startRow; i--) {
+    // start column
+    for (let i = endRow; i >= startRow; i--) {
       matrix[i][startCol] = counter;
       counter++;
     }
