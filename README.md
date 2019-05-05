@@ -1,10 +1,45 @@
 # JavaScript Algorithms and Data Structures
 
-## Memoization
+## Runtime Complexity aka Big O
+The 'runtime complexity' refers to the performance of any given algorithm.
+
+[All you need to know about Big O](https://medium.freecodecamp.org/all-you-need-to-know-about-big-o-notation-to-crack-your-next-coding-interview-9d575e7eec4)
+
+### Constant Time - O(1)
+No mater how many elements within a dataset the algorithm/operation will always take the same amount of time
+
+### Logarithmic Time - O(log(n))
+Doubling the amount of inputs being worked on doesn't double the amount of work
+
+E.G. Searching through a sorted dataset
+
+### Linear Time - O(n)
+Iterate through every element in the dataset 
+
+E.G. Iterating through a dataset or a portion of a dataset
+
+**O(n+m)** Iterating through two different collections with separate loops
+
+### Quasilinear Time - O(n*log(n))
+Doubling the number of records in the dataset doesn't double the computation time. Assuming any sorting operation.
+
+E.G. Sorting
+
+### Quadratic Time - O(n^2)
+Every record in a collection has to be compared to every other record
+
+E.G. Nested loops over the same dataset
+
+### Exponential Time - 0(2n)
+Adding an additional record to the dataset causes the processing power to double
+
+### Note on Memoization
 
 Store the arguments and result of each function call.
 
 If the function is called again with the same arguments, return the pre-computed result.
+
+[Understanding Memoization](https://codeburst.io/understanding-memoization-in-3-minutes-2e58daf33a19)
 
 ## Searching
 
