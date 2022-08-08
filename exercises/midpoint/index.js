@@ -12,14 +12,25 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
+// function midpoint(list) {
+//   let iterator = list.head;
+//   let doubleIterator = list.head;
+//   while (doubleIterator.next && doubleIterator.next.next) {
+//     doubleIterator = doubleIterator.next.next;
+//     iterator = iterator.next;
+//   }
+//   return iterator;
+// }
+
 function midpoint(list) {
-  let iterator = list.head; 
-  let doubleIterator = list.head; 
-  while (doubleIterator.next && doubleIterator.next.next) {
-    doubleIterator = doubleIterator.next.next;
-    iterator = iterator.next;
+  if (!list.head) return null;
+  let midCounter = list.head;
+  let totalCounter = list.head;
+  while (totalCounter.next && totalCounter.next.next) {
+    midCounter = midCounter.next;
+    totalCounter = totalCounter.next.next;
   }
-  return iterator;
+  return midCounter;
 }
 
 module.exports = midpoint;

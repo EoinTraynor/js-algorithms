@@ -14,34 +14,64 @@
 
 const Stack = require('./stack');
 
+// class Queue {
+//   constructor() {
+//     this.stackA = new Stack;
+//     this.stackB = new Stack;
+//   }
+//   add(n) {
+//     this.stackA.push(n);
+//   }
+//   remove() {
+//     while (this.stackA.peek()) {
+//       this.stackB.push(this.stackA.pop());
+//     }
+//     const poppedStack = this.stackB.pop();
+//     while (this.stackB.peek()) {
+//      this.stackA.push(this.stackB.pop());
+//     }
+//     return poppedStack;
+//   }
+//   peek() {
+//     while (this.stackA.peek()) {
+//       this.stackB.push(this.stackA.pop());
+//     }
+//     const lastQueueValue = this.stackB.peek();
+//     while (this.stackB.peek()) {
+//       this.stackA.push(this.stackB.pop());
+//     }
+//     return lastQueueValue;
+//   }
+// }
+
 class Queue {
   constructor() {
     this.stackA = new Stack;
     this.stackB = new Stack;
   }
-  add(n) {
-    this.stackA.push(n);
+  add(record) {
+    this.stackA.push(record);
   }
   remove() {
-    while (this.stackA.peek()) {
+    while (this.stackA.peek() !== undefined) {
       this.stackB.push(this.stackA.pop());
     }
-    const poppedStack = this.stackB.pop();
-    while (this.stackB.peek()) {
-     this.stackA.push(this.stackB.pop()); 
-    }
-    return poppedStack;
-  }
-  peek() {
-    while (this.stackA.peek()) {
-      this.stackB.push(this.stackA.pop());
-    }
-    const lastQueueValue = this.stackB.peek();
-    while (this.stackB.peek()) {
+    const result = this.stackB.pop();
+    while (this.stackB.peek() !== undefined) {
       this.stackA.push(this.stackB.pop());
     }
-    return lastQueueValue;
-  } 
+    return result;
+  }
+  peek() {
+    while (this.stackA.peek() !== undefined) {
+      this.stackB.push(this.stackA.pop());
+    }
+    const result = this.stackB.peek();
+    while (this.stackB.peek() !== undefined) {
+      this.stackA.push(this.stackB.pop());
+    }
+    return result;
+  }
 }
 
 module.exports = Queue;

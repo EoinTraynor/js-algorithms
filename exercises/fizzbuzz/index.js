@@ -12,16 +12,33 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {
-  let i = 1;
-  while (i <= n) {
-    if (i % 5 === 0) {
-      if (i % 3 === 0) console.log('fizzbuzz');
-      else console.log('buzz');
+// function fizzBuzz(n) {
+//   let i = 1;
+//   while (i <= n) {
+//     if (i % 5 === 0) {
+//       if (i % 3 === 0) console.log('fizzbuzz');
+//       else console.log('buzz');
+//     }
+//     else if (i % 3 === 0) console.log  ('fizz');
+//     else console.log(i);
+//     i++;
+//   }
+// }
+
+const fizzBuzz = (num) => {
+  if (!num) return 0;
+  for (let int = 1; int <= num; int++) {
+    const isDevisableByFive = int % 5 === 0;
+    const isDevisableByThree = int % 3 === 0;
+    if (isDevisableByFive && isDevisableByThree) {
+      console.log('fizzbuzz');
+    } else if (isDevisableByThree) {
+      console.log('fizz');
+    } else if (isDevisableByFive) {
+      console.log('buzz');
+    } else {
+      console.log(int);
     }
-    else if (i % 3 === 0) console.log  ('fizz');
-    else console.log(i);
-    i++;
   }
 }
 

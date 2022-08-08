@@ -9,25 +9,26 @@
 //   fib(4) === 3
 
 // Memoize
-function memoize(fn) {
-  const cache = {};
-  return function(...args) {
-    if (cache[args]) return cache[args];
-    const result = fn.apply(this, args);
-    cache[args] = result;
-    return result;
-  };
-}
+// function memoize(fn) {
+//   const cache = {};
+//   return function(...args) {
+//     if (cache[args]) return cache[args];
+//     const result = fn.apply(this, args);
+//     cache[args] = result;
+//     return result;
+//   };
+// }
 
 // Recursive Solution
 // Time complexity: Exponential Runtime
-function fib(n) {
-  if (n < 2) return n;
-  return fib(n-1) + fib(n-2);
-}
+// function fib(n) {
+//   if (n < 2) return n;
+//   return fib(n-1) + fib(n-2);
+// }
 
-fib = memoize(fib);
-// Iterative Solution 
+// fib = memoize(fib);
+
+// Iterative Solution
 // function fib(n) {
 //   const fib = [0, 1];
 //   for (let i = 2; i <= n; i++) {
@@ -37,5 +38,33 @@ fib = memoize(fib);
 //   }
 //   return fib[n];
 // }
+
+// Iterative Solution
+// const fib = (n) => {
+//   const sequence = [0, 1];
+//   while (sequence.length - 1 !== n) {
+//     const nextNum = sequence[sequence.length - 1] + sequence[sequence.length - 2];
+//     sequence.push(nextNum);
+//   }
+//   return sequence[n];
+// };
+
+// recursion
+const memoize = (fn) => {
+  const cache = {};
+  return (...args) => {
+    if (cache[args]) return cache[args]
+    const result = fn.apply(this, args)
+    cache[args] = result;
+    return result;
+  };
+}
+
+const slowFib = (n) => {
+  if (n < 2) return n;
+  return fib(n - 1) + fib(n - 2)
+};
+
+const fib = memoize(slowFib)
 
 module.exports = fib;
